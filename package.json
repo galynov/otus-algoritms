@@ -1,0 +1,31 @@
+{
+  "name": "otus",
+  "version": "1.0.0",
+  "description": "Homeworks",
+  "main": "index.js",
+  "dependencies": {
+    "big.js": "^6.0.3",
+    "bigdecimal": "^0.6.1",
+    "fs": "^0.0.1-security",
+    "js-big-decimal": "^1.3.1",
+    "mathjs": "^8.1.1",
+    "prettier": "^2.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test_01": "cd 01-loops-and-recursion && node index.js && cd ../",
+    "test_02": "cd 02-algebraic-algorithms && node index.js && cd ../",
+    "test_03": "cd 03-bit-arithmetic && node index.js && cd ../"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/artemov34/otus-algoritms.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/artemov34/otus-algoritms/issues"
+  },
+  "homepage": "https://github.com/artemov34/otus-algoritms#readme"
+}
