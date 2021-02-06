@@ -1,4 +1,5 @@
 /* 2а. Итеративный (n умножений) */
+console.log('!!!!!!!!!!!!!!!!!!!!');
 function iterativePower(base, pow) {
   let result = 1;
   for (let i = 0; i < pow; i++) {
@@ -17,11 +18,11 @@ function powerTwoMultipy(number, pow) {
 
   result = costumePow(number, closestPow);
 
-  console.log('result xz', result, 'closestPow', closestPow);
+  // console.log('result xz', result, 'closestPow', closestPow);
   for (i = 0; i < resultPow; i++) {
     result = result * number;
   }
-  console.log(result);
+  // console.log(result);
   return Number.parseFloat(result.toFixed(11));
 }
 
@@ -32,8 +33,26 @@ function costumePow(num, pow) {
   return num;
 }
 
+function powWithBinary(num, pow) {
+  const binaryPow = parseInt(pow).toString(2);
+  const binaryPowArray = binaryPow.split('').reverse();
+  const binaryResult = binaryPowArray.map((el, i) => {
+    return iterativePower(2, i);
+  });
+  let result = 1;
+  console.log(binaryPowArray);
+  binaryPowArray.forEach((el, i) => {
+    if (+el) {
+      result *= powerTwoMultipy(num, binaryResult[i]);
+    }
+  });
+  return result;
+}
+
 const jsPow = 1.000001 ** (2 ** 19); // result 1.6892552271606103
 const costumePowJs = costumePow(1.000001, 19); // result  1.689255227180379
+
+powWithBinary(2, 5);
 
 //console.log(jsPow);
 //console.log(costumePowJs);
