@@ -79,7 +79,6 @@ function fibonacchiMatrix(n) {
 
     n >>= 1;
   }
-  //return vector value
   return rc;
 }
 
@@ -87,5 +86,3 @@ module.exports.fibonacchi = fibonacchi;
 module.exports.fibonacchiLine = fibonacchiLine;
 module.exports.fibonacchiGold = fibonacchiGold;
 module.exports.fibonacchiMatrix = fibonacchiMatrix;
-
-//console.log(fibonacchiGold(50));

@@ -8,14 +8,14 @@
 
 const helpers = require('../helpers');
 const fibo = require('./fibonacchi');
-const power = require('./fibonacchi');
+const power = require('./power');
 
 const testFolder = './tests';
 
 const testCategories = [
   {
     path: `${testFolder}/3.Power/`,
-    disabled: true,
+    disabled: false,
     condition: (input, output) => {
       //console.log('input', input);
       //console.log('output', output);
@@ -31,10 +31,11 @@ const testCategories = [
   },
   {
     path: `${testFolder}/4.Fibo/`,
+    disabled: false,
     condition: (input, output) => {
       //return tickets.countTickets(input) == output;
       const result = fibo.fibonacchiMatrix(+input);
-      console.log(output, result);
+      //console.log(output, result);
       return result == output;
     }
   }

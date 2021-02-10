@@ -18,7 +18,6 @@ function powerTwoMultipy(number, pow) {
 
   result = costumePow(number, closestPow);
 
-  // console.log('result xz', result, 'closestPow', closestPow);
   for (i = 0; i < resultPow; i++) {
     result = result * number;
   }
@@ -52,24 +51,6 @@ function powWithBinary(num, pow) {
 const jsPow = 1.000001 ** (2 ** 19); // result 1.6892552271606103
 const costumePowJs = costumePow(1.000001, 19); // result  1.689255227180379
 
-powWithBinary(2, 5);
-
-//console.log(jsPow);
-//console.log(costumePowJs);
-//return false;
-/*
-test 5 pow 19  1.000001
-
-1.6892552271606 //php 
-1.6892552271606 // c#
-1.6892552271606 // js
-
-1.689255224947
-
-1.6892552271804
-1.689255227180379
-
-*/
-//powerTwoMultipy(1.00001, 100000);
-
-//return false;
+module.exports.iterativePower = iterativePower;
+module.exports.powerTwoMultipy = powerTwoMultipy;
+module.exports.powWithBinary = powWithBinary;
