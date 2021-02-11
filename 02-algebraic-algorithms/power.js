@@ -1,5 +1,4 @@
 /* 2а. Итеративный (n умножений) */
-console.log('!!!!!!!!!!!!!!!!!!!!');
 function iterativePower(base, pow) {
   let result = 1;
   for (let i = 0; i < pow; i++) {
@@ -36,10 +35,9 @@ function powWithBinary(num, pow) {
   const binaryPow = parseInt(pow).toString(2);
   const binaryPowArray = binaryPow.split('').reverse();
   const binaryResult = binaryPowArray.map((el, i) => {
-    return iterativePower(2, i);
+    return powerTwoMultipy(2, i);
   });
   let result = 1;
-  console.log(binaryPowArray);
   binaryPowArray.forEach((el, i) => {
     if (+el) {
       result *= powerTwoMultipy(num, binaryResult[i]);

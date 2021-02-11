@@ -15,7 +15,7 @@ const testFolder = './tests';
 const testCategories = [
   {
     path: `${testFolder}/3.Power/`,
-    disabled: false,
+    disabled: true,
     condition: (input, output) => {
       //console.log('input', input);
       //console.log('output', output);
@@ -34,7 +34,7 @@ const testCategories = [
     disabled: false,
     condition: (input, output) => {
       //return tickets.countTickets(input) == output;
-      const result = fibo.fibonacchiMatrix(+input);
+      const result = fibo.fibonacchi(+input);
       //console.log(output, result);
       return result == output;
     }
@@ -43,6 +43,7 @@ const testCategories = [
 
 (async () => {
   await testCategories.forEach(async ({ path, condition, disabled }) => {
+    const start = new Date().getTime();
     if (disabled) {
       return;
     }
@@ -57,5 +58,7 @@ const testCategories = [
       console.log('end - ', t.name);
       console.log('\x1b[0m');
     });
+    const end = new Date().getTime();
+    console.log('Time', end - start);
   });
 })();
